@@ -1,0 +1,14 @@
+The detectGestures function was where most of the calculation code is located,
+my team and I decided to calibrate the user's arm length by taking samples of depth
+measurements via the kinect every 15 time steps and normalizing over those measurements.
+We then normalized the sensor data to wheel speed so that a percentage of your arm
+extension mapped to a percentage of the robot's wheel speed. After testing, we created a larger range for 0 wheel speed because it was too difficult to get accurate sensor
+readings and difficult to hold your arms steady when you want the robot to stop.
+
+We did similar calculations when adding the robot's claw movement/functionality.
+
+UserTrackerApplication.java just sets up the onscreen display of the user and begins
+the UserTracker code.
+
+BluetoothConnection.java sets up a bluetooth connection between the host computer
+and the NXT robot using a java library called blue cove.

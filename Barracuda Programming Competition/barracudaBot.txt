@@ -1,0 +1,14 @@
+This project required solving the card game "Rack-O" virtually using your own algorithm.
+The game consists of an 80 card deck of cards numbered 1-80. Each player is dealt a 20
+card hand. The purpose of the game is to organize your 20 cards in ascending order,
+and also have 5 cards in sequential order (like 4,5,6,7,8). Each turn, you may either take
+a card from the face-down deck, or choose the face-up card from the discard pile and you 
+may swap that card with one of the cards in your hand. Our bot also had a time limit
+for each move so we could not do extensive calculations.
+
+My team (Ahmed, Travis, and I) decided to analyze the top face-up card of the discard pile
+to determine if it is a "good move" by determining if it reduces the number of out of 
+order cards in our hand, and also check if it creates a sequence of 3 or more cards (for
+the 5 card sequence). If it did either of the above, we would swap the face-up discard 
+pile card with the one in our hand. Otherwise, we would draw a face-down card and
+analyze again for the best placement.
